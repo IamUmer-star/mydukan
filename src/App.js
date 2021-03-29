@@ -1,13 +1,22 @@
 import React from 'react';
 import HomePage from "./pages/homepage.component";
-function App() {
-  return (
-      <div className="App">
+import {BrowserRouter} from 'react-router-dom'
 
-          <HomePage/>
 
-      </div>
-  );
+
+
+
+function App(props) {
+    return (
+     <div className="App">
+         <BrowserRouter>
+
+            <HomePage/>
+         </BrowserRouter>
+         </div>
+
+
+    );
 }
 
 export default App;
