@@ -1,25 +1,22 @@
 import React from 'react';
 import HomePage from "./pages/home-page/homepage.component";
-import {BrowserRouter ,Switch,Route} from 'react-router-dom'
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import ShopPage from "./pages/shop-page/shop.component";
+import Header from "./Components/header/header.component";
+import './App.css';
 
-
-
-
-
-
-function App(props) {
+function App() {
     return (
-     <div className="App">
-         <BrowserRouter>
-<Switch>
-            <Route exact path={'/'} component={HomePage}/>
-            <Route path={'/shop'} component={ShopPage}/>
-</Switch>
-         </BrowserRouter>
-         </div>
-
-
+        <div className={'App'}>
+            <BrowserRouter>
+            <Header />
+            <Switch>
+                <Route exact path='/' component={HomePage} />
+                <Route path='/shop' component={ShopPage} />
+                <Route path='/contact' component={ShopPage} />
+            </Switch>
+            </BrowserRouter>
+        </div>
     );
 }
 
