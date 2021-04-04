@@ -1,16 +1,18 @@
 import React from 'react';
 import './Butoon.style.scss'
 
-const Button = ({children , ...otherprops}) =>{
+const Button = ({children, isGoogleSignin, ...otherprops}) => {
 
 
-    return(
+    return (
 
         <div>
-            <button className={'custom-button'} {...otherprops} > {children}   </button>
+            <button
+                className={`${isGoogleSignin ? 'google-sign-in' : ''} custom-button`} {...otherprops} > {children}   </button>
         </div>
     )
 }
+
 export default Button;
 
 
