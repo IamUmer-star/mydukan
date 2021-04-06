@@ -53,7 +53,7 @@ class Signup extends React.Component {
 
             <div className={'sign-up'}>
                 <h2 className={'title'}>i dont have a sccount</h2>
-                <span>Sign up wiht email and password</span>
+                <span>Sign up with email and password</span>
                 <form className={'sign-up-form'} onClick={this.handelSubmit}>
 
                     <FormInput type={'text'}
