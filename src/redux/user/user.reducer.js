@@ -2,17 +2,18 @@ const INITIAL_STATE = {
     currentUser: null
 
 }
+//2nd param is action is just an object that contains the data and the action
+const userReducer =(state = INITIAL_STATE, {type,payload}) =>{
 
-const userReducer = (state=INITIAL_STATE , action) => {
-switch (action.type){
-    case '':{
+    switch (type) {
+        case 'SET_CURRENT_USER':
+            return {
+                ...state,currentUser: payload
+            }
 
-    };
-    defaul:{
-        return state
-    };
+        default:
+            return state;
 
-
+    }
 }
-
-}
+export default  userReducer;

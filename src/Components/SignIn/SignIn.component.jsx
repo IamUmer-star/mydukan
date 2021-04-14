@@ -58,6 +58,7 @@ class SignIn extends React.Component {
                         handelCHange={this.handelChange}
                         value={this.state.password}/>
                     <Button type="submit">Sign in</Button>
+                    {''}
                     <Button onClick={signInWithGoogle} isGoogleSignin>
                         {' '}Sign in With Google
                         {' '}
