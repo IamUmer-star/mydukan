@@ -35,7 +35,7 @@ const Header = ({currentUser}) => {
                     currentUser ?
                         <div className={`option`}
                              onClick={() => auth.signOut()}>Sign Out
-                            <div>{currentUser.displayName}</div>
+                            <div>{currentUser.displayName ? currentUser.displayName : 'loading'}</div>
 
                         </div>
                         :
@@ -48,8 +48,8 @@ const Header = ({currentUser}) => {
         </div>
     );
 }
-const mapStateToProps = state =>({
-    currentUser:state.user.currentUser,
+const mapStateToProps = ({user} )=>({
+    currentUser:user.currentUser,
 })
 
 
